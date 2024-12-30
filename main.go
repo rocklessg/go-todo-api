@@ -1,10 +1,10 @@
 package main
 
-import(
+import (
 	"os"
 
-	routes "go-todo/routes"
 	"github.com/gin-gonic/gin"
+	routes "go-todo/routes"
 )
 
 func main() {

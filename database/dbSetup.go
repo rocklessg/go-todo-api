@@ -16,7 +16,7 @@ func TodoDbContext() *mongo.Client {
 	// Create a new client and connect to the MongoDB server
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
-    	
+
 	client, err := mongo.Connect(ctx, options.Client().ApplyURI(mongoConnectionString))
 	if err != nil {
 		log.Fatal(err)
@@ -27,7 +27,7 @@ func TodoDbContext() *mongo.Client {
 	if err != nil {
 		log.Fatal(err)
 	}
-	
+
 	fmt.Println("Connected to MongoDB!")
 	return client
 }
